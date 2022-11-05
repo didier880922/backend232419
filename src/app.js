@@ -10,8 +10,9 @@ app.get('/api/products', (req, res) => {
     res.send(datafull.products);
 })
 
-app.get('api/products/slug/:slug', (req, res) => {
-    const product = datafull.products.find( (x) => x.slug === req.params-slug);
+app.get('/api/products/slug/:slug', (req, res) => {
+    const product = datafull.products.find((x) => x.slug === req.params.slug);
+    console.log(product);
     if(product) {
         res.send(product);
     }

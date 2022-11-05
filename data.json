@@ -19,7 +19,7 @@
             "category": "Almacenamiento",
             "image": "/images/p2.jpg",
             "price": 130000,
-            "countInStock": 100,
+            "countInStock": 2,
             "brand": "Crucial",
             "rating": 4.2,
             "numReviews": 290,
