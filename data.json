@@ -1,12 +1,13 @@
 {
     "products": [
         {
+            "_id": "1",
             "name": "Portatil HP 14-CF3412LA",
             "slug": "portatil-hp-14-cf3412la",
             "category": "Laptops",
             "image": "/images/p1.jpg",
             "price": 1200000,
-            "countInStock": 36,
+            "countInStock": 5,
             "brand": "HP",
             "rating": 4.7,
             "numReviews": 234,
@@ -14,6 +15,7 @@
 
         },
         {
+            "_id": "2",
             "name": "Disco solido SSD Crucial 240GB BX500",
             "slug": "disco-solido-ssd-crucial-240gb-bx500",
             "category": "Almacenamiento",
@@ -27,6 +29,7 @@
 
         },
         {
+            "_id": "3",
             "name": "Disco Solido ADATA SSD M.2 250GB",
             "slug": "disco-solido-adata-ssd-m.2-250gb",
             "category": "Almacenamiento",
@@ -40,6 +43,7 @@
 
         },
         {
+            "_id": "4",
             "name": "Lenovo 3 14ADA05 AMD ATHLON SILVER 3050U",
             "slug": "lenovo-3-14ada05-amd-athlon-silver-3050u",
             "category": "Laptops",
