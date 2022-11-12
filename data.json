@@ -1,7 +1,7 @@
 {
     "products": [
         {
-            "_id":"1",
+
             "name": "Portatil HP 14-CF2515LA",
             "slug": "portatil-hp-14-cf2515la",
             "category": "Laptops",
@@ -14,7 +14,7 @@
             "description": "Portatil HP 14 CF2515LA" 
         },
         {
-            "_id":"2",
+
             "name": "Disco solido SSD Crucial 240GB",
             "slug": "Disco-solido-ssd-crucial-240gb",
             "category": "Almanamiento",
@@ -27,7 +27,7 @@
             "description": "Disco solido SSD Crucial 240GB" 
         },
         {
-            "_id":"3",
+
             "name": "Disco Solido Adata SSD M.2 250GB",
             "slug": "Disco-solido-ssd-adata-240gb",
             "category": "Almanamiento",
@@ -40,7 +40,7 @@
             "description": "Disco Solido Adata SSD M.2 250GB" 
         },
         {
-            "_id":"4",
+
             "name": "LENOVO 3 14ADA05 AMD ATHLON SILVER 3050U",
             "slug": "lenovo-3-amd-athlon-silver-3050u",
             "category": "Laptops",

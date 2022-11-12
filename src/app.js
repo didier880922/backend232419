@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const datafull = require('../data.json');
+const seedRouter = require('./routes/seedRoutes');
 const app = express();
 
 app.use(function(req, res, next) {
@@ -8,6 +9,8 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
+
+app.use('/api/seed', seedRouter);
 
 app.get('/api/products', (req, res) => {
     res.send(datafull.products);
@@ -40,6 +43,7 @@ app.set('port', process.env.PORT || 4500);
 
 // Middlewares
 app.use(cors());
+//app.use(express.urlencoded({ extended: false }))
 app.use(express.json());
 
 // routes
