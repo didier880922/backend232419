@@ -2,7 +2,14 @@ const express = require('express');
 const cors = require('cors');
 const datafull = require('../data.json');
 const seedRouter = require('./routes/seedRoutes');
+const productRouter = require('./routes/productRoutes');
+const userRouter = require('./routes/userRoutes');
 const app = express();
+
+// Middlewares
+app.use(cors());
+//app.use(express.urlencoded({ extended: false }))
+app.use(express.json());
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
@@ -10,42 +17,16 @@ app.use(function(req, res, next) {
     next();
   });
 
+// routes
 app.use('/api/seed', seedRouter);
+app.use('/api/products', productRouter)
+app.use('/api/users', userRouter);
 
-app.get('/api/products', (req, res) => {
-    res.send(datafull.products);
-});
-
-app.get('/api/products/slug/:slug', (req, res) => {
-  const product = datafull.products.find((x) => x.slug === req.params.slug);
-  //console.log(product);
-  if (product) {
-    res.send(product);
-  }
-  else {
-    res.status(404).send({ message: 'Producto no encontrado'});
-  }
-});
-
-app.get('/api/products/:id', (req, res) => {
-  const product = datafull.products.find((x) => x._id === req.params.id);
-  //console.log(product);
-  if (product) {
-    res.send(product);
-  }
-  else {
-    res.status(404).send({ message: 'Producto no encontrado'});
-  }
+app.use((err, req, res, next) => {
+  res.status(500).send({ message: err.message });
 });
 
 // Configuraciones
 app.set('port', process.env.PORT || 4500);
-
-// Middlewares
-app.use(cors());
-//app.use(express.urlencoded({ extended: false }))
-app.use(express.json());
-
-// routes
 
 module.exports = app;
